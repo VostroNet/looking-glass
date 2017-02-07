@@ -126,7 +126,7 @@ $config = array(
     // and Quagga)
     'traceroute_options' => '-A -q1 -N32 -w1 -m15',
     // Source option to use when tracerouting
-    'traceroute_source_option' => '-s'
+    'traceroute_source_option' => ''
   ),
 
   // Documentation (must be HTML)
