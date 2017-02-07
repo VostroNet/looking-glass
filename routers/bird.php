@@ -110,9 +110,9 @@ final class Bird extends Router {
     switch ($command) {
       case 'bgp':
         if (match_ipv6($parameter, false)) {
-          $commands[] = $birdc6.' \'show route for '.$parameter.'\'';
+          $commands[] = $birdc6.' \'show route for '.$parameter.' all\'';
         } else if (match_ipv4($parameter, false)) {
-          $commands[] = $birdc.' \'show route for '.$parameter.'\'';
+          $commands[] = $birdc.' \'show route for '.$parameter.' all\'';
         } else {
           throw new Exception('The parameter is not an IP address.');
         }
