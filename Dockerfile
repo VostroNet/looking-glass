@@ -11,5 +11,5 @@ RUN apt-get update \
   && chown www-data /var/log/looking-glass.log
 
 WORKDIR  /var/www/html/
-ADD * ./
+ADD ./ ./
 RUN chown -R www-data /var/www/html
