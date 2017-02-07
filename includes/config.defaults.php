@@ -2,7 +2,7 @@
 
 /*
  * Looking Glass - An easy to deploy Looking Glass
- * Copyright (C) 2014-2016 Guillaume Mazoyer <gmazoyer@gravitons.in>
+ * Copyright (C) 2014-2017 Guillaume Mazoyer <gmazoyer@gravitons.in>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -126,7 +126,7 @@ $config = array(
     // and Quagga)
     'traceroute_options' => '-A -q1 -N32 -w1 -m15',
     // Source option to use when tracerouting
-    'traceroute_source_option' => '-s'
+    'traceroute_source_option' => ''
   ),
 
   // Documentation (must be HTML)
@@ -157,7 +157,7 @@ $config = array(
     ),
     // Documentation for the 'traceroute' query
     'traceroute' => array(
-      'command' =>'traceroute IP_ADDRESS|HOSTNAME',
+      'command' => 'traceroute IP_ADDRESS|HOSTNAME',
       'description' => 'Display the path to a given destination.',
       'parameter' => 'The parameter must be an IPv4/IPv6 address (without mask) or a hostname.<br />RFC1918 addresses, IPv6 starting with FD or FC, and IPv4 reserved ranges (0.0.0.0/8, 169.254.0.0/16, 192.0.2.0/24 and 224.0.0.0/4) may be refused.<br /><br />Example of valid arguments:<br /><ul><li>8.8.8.8</li><li>2001:db8:1337::42</li><li>example.com</li></ul>'
     )

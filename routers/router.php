@@ -2,7 +2,7 @@
 
 /*
  * Looking Glass - An easy to deploy Looking Glass
- * Copyright (C) 2014-2016 Guillaume Mazoyer <gmazoyer@gravitons.in>
+ * Copyright (C) 2014-2017 Guillaume Mazoyer <gmazoyer@gravitons.in>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,6 +23,7 @@ require_once('includes/config.defaults.php');
 require_once('config.php');
 require_once('bird.php');
 require_once('cisco.php');
+require_once('cisco_iosxr.php');
 require_once('juniper.php');
 require_once('quagga.php');
 require_once('includes/utils.php');
@@ -169,6 +170,10 @@ abstract class Router {
       case 'cisco':
       case 'ios':
         return new Cisco($config, $router_config, $id, $requester);
+
+      case 'ios-xr':
+      case 'iosxr':
+        return new IOSXR($config, $router_config, $id, $requester);
 
       case 'juniper':
       case 'junos':

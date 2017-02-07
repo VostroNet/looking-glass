@@ -2,7 +2,7 @@
 
 /*
  * Looking Glass - An easy to deploy Looking Glass
- * Copyright (C) 2014-2016 Guillaume Mazoyer <gmazoyer@gravitons.in>
+ * Copyright (C) 2014-2017 Guillaume Mazoyer <gmazoyer@gravitons.in>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -277,7 +277,7 @@ final class LookingGlass {
       $this->render_peering_policy_modal();
     }
     print('</body>');
-    print('<script src="libs/jquery-3.1.0.min.js"></script>');
+    print('<script src="libs/jquery-3.1.1.min.js"></script>');
     print('<script src="libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>');
     print('<script src="js/looking-glass.js"></script>');
     print('</html>');

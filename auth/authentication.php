@@ -2,7 +2,7 @@
 
 /*
  * Looking Glass - An easy to deploy Looking Glass
- * Copyright (C) 2014-2016 Guillaume Mazoyer <gmazoyer@gravitons.in>
+ * Copyright (C) 2014-2017 Guillaume Mazoyer <gmazoyer@gravitons.in>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
  */
 
-ini_set('include_path', ini_get('include_path').':./libs/phpseclib-1.0.3');
+ini_set('include_path', ini_get('include_path').':./libs/phpseclib-1.0.5');
 
 require_once('ssh.php');
 require_once('telnet.php');
