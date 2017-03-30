@@ -121,12 +121,12 @@ final class Bird extends Router {
       case 'as-path-regex':
         if (match_aspath_regex($parameter)) {
           if (!$this->config['disable_ipv6']) {
-            $commands[] = $birdc6.' \'show route where bgp_path ~ [= '.
-              $parameter.' =]\'';
+            $commands[] = $birdc6.' \'show route where bgp_path ~ [= *'.
+              $parameter.'* =]\'';
           }
           if (!$this->config['disable_ipv4']) {
-            $commands[] = $birdc.' \'show route where bgp_path ~ [= '.
-              $parameter.' =]\'';
+            $commands[] = $birdc.' \'show route where bgp_path ~ [= *'.
+              $parameter.'* =]\'';
           }
         } else {
           throw new Exception('The parameter is not an AS-Path regular expression.');
@@ -136,12 +136,12 @@ final class Bird extends Router {
       case 'as':
         if (match_as($parameter)) {
           if (!$this->config['disable_ipv6']) {
-            $commands[] = $birdc6.' \'show route where bgp_path ~ [= '.
-              $parameter.' =]\'';
+            $commands[] = $birdc6.' \'show route where bgp_path ~ [= *'.
+              $parameter.'* =]\'';
           }
           if (!$this->config['disable_ipv4']) {
-            $commands[] = $birdc.' \'show route where bgp_path ~ [= '.
-              $parameter.' =]\'';
+            $commands[] = $birdc.' \'show route where bgp_path ~ [= *'.
+              $parameter.'* =]\'';
           }
         } else {
           throw new Exception('The parameter is not an AS number.');
