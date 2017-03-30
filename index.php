@@ -70,7 +70,6 @@ final class LookingGlass {
     print('<label for="query">Command to issue</label>');
     print('<select size="5" class="form-control" name="query" id="query">');
     print('<option value="bgp" selected="selected">show route IP_ADDRESS</option>');
-    print('<option value="as-path-regex">show route as-path-regex AS_PATH_REGEX</option>');
     print('<option value="as">show route AS</option>');
     print('<option value="ping">ping IP_ADDRESS|HOSTNAME</option>');
     print('<option value="traceroute">traceroute IP_ADDRESS|HOSTNAME</option>');
